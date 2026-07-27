@@ -8,8 +8,10 @@
 
 <title>Kiki | Creative Graphic Designer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@700&family=League+Spartan:wght@700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@700&family=League+Spartan:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,706 +22,372 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 }
 
-
 body{
-
-font-family:Poppins,sans-serif;
-
-background:
-linear-gradient(
-rgba(255,248,245,.94),
-rgba(255,248,245,.94)
-),
-url("background.png");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
+font-family:'Poppins',sans-serif;
+background:#fbf5f2;
 color:#704333;
-
 overflow-x:hidden;
-
+line-height:1.7;
 }
-
 
 body::before{
-
 content:"";
-
 position:fixed;
-
 inset:0;
-
 pointer-events:none;
-
-opacity:.08;
-
-background-image:
-radial-gradient(#8b4d37 .8px,transparent .8px);
-
+opacity:.05;
+background-image:radial-gradient(#8b4d37 .8px,transparent .8px);
 background-size:12px 12px;
-
 }
-
 
 /* NAVBAR */
 
-
 header{
-
 position:fixed;
-
 top:20px;
-
 left:50%;
-
 transform:translateX(-50%);
-
 width:90%;
-
 max-width:1200px;
-
-padding:15px 35px;
-
+padding:16px 35px;
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
-background:rgba(255,255,255,.55);
-
-backdrop-filter:blur(20px);
-
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(15px);
 border-radius:60px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
+box-shadow:0 15px 35px rgba(0,0,0,.08);
 z-index:1000;
-
 }
-
 
 .logo{
-
 display:flex;
-
 align-items:center;
-
 gap:15px;
-
 }
-
 
 .logo img{
-
 width:55px;
-
 height:55px;
-
 border-radius:50%;
-
 object-fit:cover;
-
 }
-
 
 .logo h3{
-
 font-size:26px;
-
+font-weight:700;
 color:#8d4f3a;
-
 }
-
 
 nav{
-
 display:flex;
-
 gap:35px;
-
 }
-
 
 nav a{
-
 text-decoration:none;
-
-color:#704333;
-
 font-weight:600;
-
+color:#704333;
 position:relative;
-
 }
-
 
 nav a::after{
-
 content:"";
-
 position:absolute;
-
-bottom:-7px;
-
 left:0;
-
-height:2px;
-
+bottom:-5px;
 width:0;
-
+height:2px;
 background:#9b523d;
-
 transition:.3s;
-
 }
-
 
 nav a:hover::after{
-
 width:100%;
-
 }
-
-
 
 /* HERO */
 
-
 .hero{
-
 min-height:100vh;
-
-padding:150px 10% 80px;
-
+padding:150px 10%;
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 align-items:center;
-
 gap:60px;
-
 }
 
-
-.hero-text h4{
-
+.hero h4{
 color:#9b523d;
-
-letter-spacing:4px;
-
-font-size:15px;
-
-margin-bottom:20px;
-
+letter-spacing:3px;
 text-transform:uppercase;
-
+margin-bottom:20px;
 }
 
-
-.hero-text h1{
-
+.hero h1{
 font-family:'League Spartan',sans-serif;
-
 font-size:110px;
-
 line-height:.9;
-
 color:#814735;
-
 }
 
-
-.hero-text h2{
-
-font-family:Caveat,cursive;
-
-font-size:65px;
-
-margin:15px 0;
-
+.hero h2{
+font-family:'Caveat',cursive;
+font-size:60px;
 color:#9b523d;
-
+margin:10px 0 20px;
 }
 
-
-.hero-text p{
-
+.hero p{
 font-size:18px;
-
-line-height:1.9;
-
 max-width:550px;
-
-margin:25px 0 35px;
-
+margin-bottom:35px;
 }
-
-
 
 .hero-buttons{
-
 display:flex;
-
 gap:20px;
-
 flex-wrap:wrap;
-
 }
-
-
 
 .button{
-
-padding:16px 38px;
-
+display:inline-block;
+padding:16px 36px;
 background:#9b523d;
-
 color:white;
-
 text-decoration:none;
-
 border-radius:50px;
-
 font-weight:600;
-
 transition:.3s;
-
 }
-
 
 .button:hover{
-
 transform:translateY(-5px);
-
-box-shadow:0 20px 35px rgba(155,82,61,.3);
-
+box-shadow:0 20px 35px rgba(155,82,61,.25);
 }
-
 
 .secondary{
-
 background:white;
-
 color:#9b523d;
-
 border:2px solid #9b523d;
-
 }
-
 
 .secondary:hover{
-
 background:#9b523d;
-
 color:white;
-
 }
-
-
 
 .hero-image{
-
 display:flex;
-
 justify-content:center;
-
 }
-
 
 .hero-image img{
-
 width:420px;
-
 max-width:100%;
-
-border-radius:40px;
-
-box-shadow:0 30px 60px rgba(0,0,0,.15);
-
-animation:float 5s infinite ease-in-out;
-
+animation:float 5s ease-in-out infinite;
 }
 
-
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0);}
+}
 
 /* STATS */
 
-
 .stats{
-
-padding:20px 10% 100px;
-
+padding:40px 10% 100px;
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 gap:25px;
-
 }
-
 
 .stat{
-
 background:white;
-
 padding:35px;
-
-border-radius:25px;
-
 text-align:center;
-
+border-radius:25px;
 box-shadow:0 15px 35px rgba(0,0,0,.08);
-
 transition:.3s;
-
 }
-
 
 .stat:hover{
-
-transform:translateY(-10px);
-
+transform:translateY(-8px);
 }
-
 
 .stat h2{
-
-font-size:45px;
-
+font-size:46px;
 color:#9b523d;
-
 }
 
-
-.stat p{
-
-font-weight:500;
-
-}
-
-
-
-/* GENERAL SECTION */
-
+/* SECTIONS */
 
 section{
-
 padding:100px 10%;
-
 }
-
 
 .title{
-
 font-family:'League Spartan',sans-serif;
-
 font-size:55px;
-
 text-align:center;
-
-color:#814735;
-
 margin-bottom:60px;
-
+color:#814735;
 }
-
-
 
 /* ABOUT */
 
-
 .about{
-
 display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:40px;
-
+grid-template-columns:repeat(2,1fr);
+gap:35px;
 }
-
 
 .about-box{
-
-background:rgba(255,255,255,.55);
-
+background:white;
 padding:40px;
-
-border-radius:30px;
-
-backdrop-filter:blur(15px);
-
-box-shadow:0 20px 45px rgba(0,0,0,.08);
-
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
 transition:.3s;
-
 }
-
 
 .about-box:hover{
-
 transform:translateY(-8px);
-
 }
-
 
 .about-box h3{
-
-font-size:30px;
-
-margin-bottom:20px;
-
+margin-bottom:15px;
 color:#8d4f3a;
-
 }
 
-
-.about-box p{
-
-line-height:2;
-
-}
-
-
-/* ANIMATION */
-
-
-@keyframes float{
-
-0%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-20px);
-
-}
-
-100%{
-
-transform:translateY(0);
-
-}
-
-}
-
-
-
-/* MOBILE */
-
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
-
-header{
-
-padding:12px 20px;
-
-}
-
-
 nav{
-
 display:none;
-
 }
-
 
 .hero{
-
 grid-template-columns:1fr;
-
 text-align:center;
-
 }
 
-
-.hero-text h1{
-
-font-size:75px;
-
+.hero p{
+margin:auto auto 30px;
 }
-
 
 .hero-buttons{
-
 justify-content:center;
-
 }
 
+.hero h1{
+font-size:70px;
+}
 
 .about{
-
 grid-template-columns:1fr;
-
 }
-
 
 .stats{
-
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(2,1fr);
+}
 
 }
 
-
-}
-
-
-@media(max-width:500px){
-
+@media(max-width:600px){
 
 .stats{
-
 grid-template-columns:1fr;
-
 }
 
-
-.hero-text h1{
-
-font-size:60px;
-
+.hero h1{
+font-size:55px;
 }
 
-
 }
-
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
-
 <div class="logo">
-
-<img src="logo.png">
-
+<img src="logo.png" alt="Kiki Logo">
 <h3>Kiki</h3>
-
 </div>
 
-
 <nav>
-
 <a href="#about">About</a>
-
 <a href="#portfolio">Portfolio</a>
-
 <a href="#services">Services</a>
-
 <a href="#contact">Contact</a>
-
 </nav>
-
 
 </header>
 
-
 <section class="hero">
 
-
-<div class="hero-text">
-
+<div>
 
 <h4>Creative Graphic Designer</h4>
 
-
 <h1>KIKI</h1>
-
 
 <h2>The Designer</h2>
 
-
 <p>
-
-I create beautiful brand identities, packaging designs, print media and social media visuals that help businesses build a strong visual presence.
-
+I create memorable brand identities, packaging, print media and social media designs that help businesses stand out.
 </p>
 
-
 <div class="hero-buttons">
-
 
 <a href="#portfolio" class="button">
 View Portfolio
 </a>
 
-
 <a href="#contact" class="button secondary">
 Hire Me
 </a>
 
-
 </div>
 
-
 </div>
-
-
 
 <div class="hero-image">
 
-<img src="logo.png" alt="Kiki Designer">
+<img src="logo.png" alt="Kiki">
 
 </div>
-
 
 </section>
 
-
 <section class="stats">
 
-
 <div class="stat">
-
 <h2>50+</h2>
-
 <p>Projects</p>
-
 </div>
 
-
 <div class="stat">
-
 <h2>20+</h2>
-
 <p>Clients</p>
-
 </div>
 
-
 <div class="stat">
-
 <h2>3+</h2>
-
 <p>Years Experience</p>
-
 </div>
-
 
 <div class="stat">
-
 <h2>100%</h2>
-
-<p>Creativity</p>
-
+<p>Creative Passion</p>
 </div>
 
-
-</section> <!-- ABOUT SECTION -->
+</section>
 
 <section id="about">
 
@@ -727,734 +395,370 @@ Hire Me
 About Me
 </h2>
 
-
 <div class="about">
 
-
 <div class="about-box">
 
-<h3>
-Creative Thinking
-</h3>
+<h3>Creative Thinking</h3>
 
 <p>
-
-I create thoughtful visual identities, elegant branding systems, packaging, print designs, and digital graphics that help brands communicate with confidence and style.
-
+I create thoughtful visual identities, elegant branding systems, packaging, print media and digital graphics that help brands communicate with confidence and style.
 </p>
 
 </div>
 
-
-
 <div class="about-box">
 
-<h3>
-Design Philosophy
-</h3>
+<h3>Design Philosophy</h3>
 
 <p>
-
-Every design should tell a story. My approach combines creativity, simplicity, and attention to detail to create meaningful experiences for brands and their audiences.
-
+Every design should tell a story. My work combines creativity, simplicity and attention to detail to create memorable experiences for brands and their audiences.
 </p>
 
 </div>
 
-
 </div>
 
-</section>
-
-
-
-<!-- PORTFOLIO -->
-
+</section><!-- =========================
+PORTFOLIO
+========================= -->
 
 <section id="portfolio">
 
-
-<h2 class="title">
-Featured Work
-</h2>
-
+<h2 class="title">Featured Work</h2>
 
 <div class="portfolio-grid">
 
+<div class="project">
+<img src="project1.jpg" alt="Brand Identity">
+<div class="overlay">
+<h3>Brand Identity</h3>
+<p>Logo • Colors • Typography</p>
+</div>
+</div>
 
 <div class="project">
-
-<img src="project1.jpg">
-
+<img src="project2.jpg" alt="Packaging">
 <div class="overlay">
-
-<h3>
-Brand Identity
-</h3>
-
-<p>
-Logo & Branding
-</p>
-
+<h3>Packaging Design</h3>
+<p>Creative Product Packaging</p>
 </div>
-
 </div>
-
-
 
 <div class="project">
-
-<img src="project2.jpg">
-
+<img src="project3.jpg" alt="Social Media">
 <div class="overlay">
-
-<h3>
-Packaging Design
-</h3>
-
-<p>
-Product Presentation
-</p>
-
+<h3>Social Media Design</h3>
+<p>Instagram & Facebook Creatives</p>
+</div>
 </div>
 
 </div>
-
-
-
-
-<div class="project">
-
-<img src="project3.jpg">
-
-<div class="overlay">
-
-<h3>
-Social Media
-</h3>
-
-<p>
-Digital Creative
-</p>
-
-</div>
-
-</div>
-
-
-
-
-</div>
-
 
 </section>
 
 
-
-<!-- SERVICES -->
-
+<!-- =========================
+SERVICES
+========================= -->
 
 <section id="services">
 
+<h2 class="title">My Services</h2>
 
-<h2 class="title">
-My Services
-</h2>
+<div class="services">
 
-
-<div class="services-grid">
-
-
-<div class="service-card">
-
-<h3>
-🎨 Branding
-</h3>
-
-<p>
-Complete brand identity, logos, colors, typography and visual systems.
-</p>
-
+<div class="service">
+<h3>🎨 Brand Identity</h3>
+<p>Professional logos, color palettes, typography and complete visual identity systems.</p>
 </div>
 
-
-
-<div class="service-card">
-
-<h3>
-📦 Packaging
-</h3>
-
-<p>
-Creative packaging designs that make products attractive and memorable.
-</p>
-
+<div class="service">
+<h3>📦 Packaging Design</h3>
+<p>Eye-catching packaging that attracts customers and strengthens your brand.</p>
 </div>
 
-
-
-
-<div class="service-card">
-
-<h3>
-📱 Social Media
-</h3>
-
-<p>
-Modern social media graphics and content designs for brands.
-</p>
-
+<div class="service">
+<h3>📱 Social Media</h3>
+<p>Creative posts, stories, banners and digital marketing graphics.</p>
 </div>
 
-
-
-
-<div class="service-card">
-
-<h3>
-🖨 Print Design
-</h3>
-
-<p>
-Posters, brochures, business cards and professional print materials.
-</p>
-
+<div class="service">
+<h3>🖨 Print Design</h3>
+<p>Flyers, brochures, business cards, posters and marketing materials.</p>
 </div>
 
-
-
 </div>
-
 
 </section>
 
 
-
-
-<!-- SKILLS -->
-
+<!-- =========================
+SKILLS
+========================= -->
 
 <section>
 
-
-<h2 class="title">
-Skills
-</h2>
-
-
+<h2 class="title">Skills</h2>
 
 <div class="skills">
 
-
-<div>
-
+<div class="skill">
 <p>Adobe Photoshop</p>
-
-<div class="bar">
-
-<span style="width:90%"></span>
-
+<div class="bar"><span style="width:90%"></span></div>
 </div>
 
-</div>
-
-
-
-<div>
-
+<div class="skill">
 <p>Adobe Illustrator</p>
-
-<div class="bar">
-
-<span style="width:95%"></span>
-
+<div class="bar"><span style="width:95%"></span></div>
 </div>
 
-</div>
-
-
-
-<div>
-
+<div class="skill">
 <p>Brand Identity</p>
+<div class="bar"><span style="width:92%"></span></div>
+</div>
 
-<div class="bar">
-
-<span style="width:95%"></span>
-
+<div class="skill">
+<p>Packaging Design</p>
+<div class="bar"><span style="width:90%"></span></div>
 </div>
 
 </div>
-
-
-
-<div>
-
-<p>UI Design</p>
-
-<div class="bar">
-
-<span style="width:80%"></span>
-
-</div>
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
-
-
-<!-- CONTACT -->
-
+<!-- =========================
+CONTACT
+========================= -->
 
 <section id="contact">
 
-
-<h2 class="title">
-Let's Work Together
-</h2>
-
-
+<h2 class="title">Let's Work Together</h2>
 
 <div class="contact-box">
 
-
-<h3>
-Have a project in mind?
-</h3>
-
+<h3>Have a project in mind?</h3>
 
 <p>
-
-I would love to help you create a beautiful and meaningful design for your brand.
-
+I'd love to help you build a memorable brand through creative and meaningful design.
 </p>
 
-
-<a href="mailto:yourmail@example.com" class="button">
-
+<a href="mailto:your@email.com" class="button">
 Contact Me
-
 </a>
 
-
 </div>
-
 
 </section>
 
 
-
-
-<!-- FOOTER -->
-
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
 
-
-<h2>
-Kiki The Designer
-</h2>
-
+<h2>Kiki The Designer</h2>
 
 <p>
-Creative Graphic Designer | Branding | Packaging | Digital Design
+Graphic Designer • Branding • Packaging • Social Media
 </p>
 
+<div class="footer-links">
 
-<div class="social">
+<a href="#">Instagram</a>
 
+<a href="#">Behance</a>
 
-<a href="#">
-Instagram
-</a>
-
-
-<a href="#">
-Behance
-</a>
-
-
-<a href="#">
-LinkedIn
-</a>
-
+<a href="#">LinkedIn</a>
 
 </div>
 
-
-<p class="copyright">
-
+<p class="copy">
 © 2026 Kiki. All Rights Reserved.
-
 </p>
-
 
 </footer>
 
 
-
 <style>
 
-
-/* PORTFOLIO */
-
+/* ---------- Portfolio ---------- */
 
 .portfolio-grid{
-
 display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
-
 }
-
-
 
 .project{
-
 position:relative;
-
 overflow:hidden;
-
 border-radius:25px;
-
-height:350px;
-
-box-shadow:0 20px 40px rgba(0,0,0,.12);
-
+box-shadow:0 20px 40px rgba(0,0,0,.08);
 }
-
-
 
 .project img{
-
 width:100%;
-
-height:100%;
-
+height:350px;
 object-fit:cover;
-
 transition:.5s;
-
 }
-
-
 
 .project:hover img{
-
-transform:scale(1.1);
-
+transform:scale(1.08);
 }
-
-
 
 .overlay{
-
 position:absolute;
-
 inset:0;
-
-background:linear-gradient(
-transparent,
-rgba(80,40,25,.85)
-);
-
 display:flex;
-
 flex-direction:column;
-
 justify-content:end;
-
 padding:30px;
-
+background:linear-gradient(transparent,rgba(0,0,0,.75));
 color:white;
-
 opacity:0;
-
 transition:.4s;
-
 }
-
-
 
 .project:hover .overlay{
-
 opacity:1;
-
 }
 
 
+/* ---------- Services ---------- */
 
-
-/* SERVICES */
-
-
-.services-grid{
-
+.services{
 display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
-
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
 }
 
-
-
-.service-card{
-
+.service{
 background:white;
-
 padding:35px;
-
-border-radius:25px;
-
+border-radius:20px;
 box-shadow:0 15px 35px rgba(0,0,0,.08);
-
 transition:.3s;
-
 }
 
-
-
-.service-card:hover{
-
-transform:translateY(-10px);
-
+.service:hover{
+transform:translateY(-8px);
 }
 
-
-
-.service-card h3{
-
+.service h3{
 margin-bottom:15px;
-
-color:#8d4f3a;
-
+color:#9b523d;
 }
 
 
-
-
-/* SKILLS */
-
+/* ---------- Skills ---------- */
 
 .skills{
-
 max-width:800px;
-
 margin:auto;
-
-display:flex;
-
-flex-direction:column;
-
-gap:30px;
-
 }
 
+.skill{
+margin-bottom:30px;
+}
 
-
-.skills p{
-
+.skill p{
 margin-bottom:10px;
-
 font-weight:600;
-
 }
-
-
 
 .bar{
-
 height:12px;
-
-background:#eadbd3;
-
+background:#ead9d0;
 border-radius:20px;
-
 overflow:hidden;
-
 }
-
-
 
 .bar span{
-
 display:block;
-
 height:100%;
-
 background:#9b523d;
-
 border-radius:20px;
-
 }
 
 
-
-
-/* CONTACT */
-
+/* ---------- Contact ---------- */
 
 .contact-box{
-
+max-width:800px;
+margin:auto;
 background:white;
-
 padding:60px;
-
-border-radius:35px;
-
 text-align:center;
-
-box-shadow:0 20px 45px rgba(0,0,0,.1);
-
+border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,.08);
 }
-
-
 
 .contact-box h3{
-
-font-size:35px;
-
+font-size:36px;
 margin-bottom:20px;
-
 color:#8d4f3a;
-
 }
-
-
 
 .contact-box p{
-
-margin-bottom:30px;
-
-line-height:1.8;
-
+margin-bottom:35px;
 }
 
 
-
-
-/* FOOTER */
-
+/* ---------- Footer ---------- */
 
 footer{
-
 background:#7d412f;
-
 color:white;
-
-padding:50px 10%;
-
 text-align:center;
-
+padding:60px 20px;
 }
-
-
 
 footer h2{
-
-font-family:'League Spartan';
-
-font-size:40px;
-
-margin-bottom:15px;
-
+font-family:'League Spartan',sans-serif;
+font-size:42px;
+margin-bottom:10px;
 }
 
-
-
-.social{
-
-margin:25px 0;
-
+.footer-links{
+margin:30px 0;
 display:flex;
-
 justify-content:center;
-
 gap:30px;
-
+flex-wrap:wrap;
 }
 
-
-
-.social a{
-
+.footer-links a{
 color:white;
-
 text-decoration:none;
-
+transition:.3s;
 }
 
-
-
-.copyright{
-
+.footer-links a:hover{
 opacity:.7;
+}
 
+.copy{
+opacity:.75;
 font-size:14px;
-
 }
 
-
-
-
-/* RESPONSIVE */
-
-
-@media(max-width:900px){
-
-
-.portfolio-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-.services-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-
-}
-
-
-
-@media(max-width:600px){
-
-
-.services-grid{
-
-grid-template-columns:1fr;
-
-}
-
+@media(max-width:768px){
 
 .contact-box{
-
-padding:35px;
-
+padding:35px 25px;
 }
 
-
+footer h2{
+font-size:32px;
 }
 
-
+}
 
 </style>
 
-
 </body>
-
 </html>
