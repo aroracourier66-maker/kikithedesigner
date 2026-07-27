@@ -1,14 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kiki The Designer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#f7f3eb;
+font-family:Poppins,sans-serif;
+overflow:hidden;
+
+}
+
+/* Paper Texture */
+
+body::before{
+
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(rgba(0,0,0,.03) 1px, transparent 1px);
+
+background-size:7px 7px;
+opacity:.45;
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
+
+}
+
+/* Main Text */
+
+.title{
+
+text-align:center;
+z-index:10;
+
+}
+
+.title h1{
+
+font-size:170px;
+font-weight:900;
+color:#980000;
+line-height:.9;
+letter-spacing:-8px;
+
+}
+
+.title h2{
+
+font-family:Caveat,cursive;
+
+font-size:70px;
+
+font-weight:700;
+
+margin-top:-10px;
+
+color:#7c0000;
+
+}
+
+/* Telephone */
+
+.phone{
+
+position:absolute;
+
+bottom:100px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:230px;
+
+filter:drop-shadow(0 18px 20px rgba(0,0,0,.25));
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateX(-50%) translateY(0);}
+50%{transform:translateX(-50%) translateY(-12px);}
+100%{transform:translateX(-50%) translateY(0);}
+
+}
+
+/* Scroll */
+
+.scroll{
+
+position:absolute;
+
+bottom:30px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:15px;
+
+letter-spacing:5px;
+
+color:#666;
+
+text-transform:uppercase;
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is my first website hosted on GitHub.</p>
+<section class="hero">
+
+<div class="title">
+
+<h1>Kiki</h1>
+
+<h2>the designer</h2>
+
+</div>
+
+<div class="phone">
+
+☎
+
+</div>
+
+<div class="scroll">
+
+Scroll Down
+
+</div>
+
+</section>
 
 </body>
+
 </html>
