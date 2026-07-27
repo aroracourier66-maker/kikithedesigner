@@ -65,30 +65,74 @@ background-size:12px 12px;
 
 }
 
-/* Navbar */
-
 header{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:1200px;
+    padding:16px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:60px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    z-index:999;
+}
 
-position:fixed;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
-top:0;
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
 
-left:0;
+.logo h3{
+    font-size:26px;
+    font-weight:700;
+    color:#8a4b38;
+}
 
-width:100%;
+nav{
+    display:flex;
+    gap:35px;
+}
 
-padding:25px 8%;
+nav a{
+    text-decoration:none;
+    color:#7a4735;
+    font-weight:600;
+    position:relative;
+    transition:.3s;
+}
 
-display:flex;
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#9b523d;
+    transition:.3s;
+}
 
-justify-content:space-between;
+nav a:hover::after{
+    width:100%;
+}
 
-align-items:center;
-
-z-index:999;
-
-backdrop-filter:blur(8px);
-
+nav a:hover{
+    color:#9b523d;
 }
 
 .logo{
@@ -145,74 +189,185 @@ color:#bb6a4c;
 
 }
 
-/* Hero */
-
 .hero{
 
-height:100vh;
+    min-height:100vh;
+    padding:150px 10% 80px;
 
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:0 20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
 
 }
 
-.hero h1{
+.hero-text h4{
 
-font-family:'League Spartan',sans-serif;
-
-font-size:240px;
-
-line-height:.82;
-
-letter-spacing:-10px;
-
-color:#9b523d;
+    color:#9b523d;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:20px;
 
 }
 
-.hero h2{
+.hero-text h1{
 
-font-family:Caveat,cursive;
-
-font-size:70px;
-
-margin-top:-12px;
-
-}
-
-.hero p{
-
-margin-top:25px;
-
-font-size:20px;
-
-letter-spacing:1px;
-
-max-width:700px;
-
-line-height:1.8;
+    font-family:'League Spartan',sans-serif;
+    font-size:90px;
+    line-height:.95;
+    color:#7f4534;
 
 }
 
-.hero img{
+.hero-text h2{
 
-margin-top:40px;
-
-width:170px;
-
-animation:float 5s ease-in-out infinite;
+    font-family:Caveat,cursive;
+    font-size:58px;
+    margin:15px 0;
 
 }
 
+.hero-text p{
+
+    font-size:18px;
+    line-height:1.9;
+    max-width:550px;
+    margin:30px 0;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.button{
+
+    display:inline-block;
+    padding:16px 36px;
+    background:#9b523d;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 20px 35px rgba(155,82,61,.3);
+
+}
+
+.secondary{
+
+    background:white;
+    color:#9b523d;
+    border:2px solid #9b523d;
+
+}
+
+.secondary:hover{
+
+    background:#9b523d;
+    color:white;
+
+}
+
+.hero-image{
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:420px;
+    max-width:100%;
+    border-radius:30px;
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+    animation:float 5s ease-in-out infinite;
+
+}
+<section class="hero">
+
+<div class="hero-text">
+
+<h4>Creative Graphic Designer</h4>
+
+<h1>KIKI</h1>
+
+<h2>the designer</h2>
+
+<p>
+
+I create memorable visual identities, branding systems, packaging, print materials, and social media designs that help businesses stand out and connect with their audience.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#portfolio" class="button">
+View Portfolio
+</a>
+
+<a href="#contact" class="button secondary">
+Hire Me
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="logo.png" alt="Kiki">
+
+</div>
+
+</section>
+<section class="stats">
+
+<div class="stat">
+
+<h2>50+</h2>
+
+<p>Projects</p>
+
+</div>
+
+<div class="stat">
+
+<h2>20+</h2>
+
+<p>Happy Clients</p>
+
+</div>
+
+<div class="stat">
+
+<h2>3+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Creative Passion</p>
+
+</div>
+
+</section>
+  
 .button{
 
 margin-top:45px;
