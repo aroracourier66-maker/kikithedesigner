@@ -8,31 +8,39 @@
 
 <title>Kiki The Designer</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@700&family=League+Spartan:wght@700;800&display=swap" rel="stylesheet">
+
 <style>
 
-body{
-    margin:0;
-    padding:0;
-    font-family:'Poppins',sans-serif;
-    color:#8B4B36;
-    overflow-x:hidden;
-
-    background:
-        radial-gradient(circle at top left,
-            rgba(255,214,200,.35),
-            transparent 35%),
-
-        radial-gradient(circle at bottom right,
-            rgba(240,180,160,.20),
-            transparent 35%),
-
-        linear-gradient(
-            135deg,
-            #FFF8F5 0%,
-            #FCEEE8 40%,
-            #F8E4DC 100%
-        );
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
+
+body{
+
+font-family:Poppins,sans-serif;
+
+background:
+linear-gradient(rgba(255,248,245,.95),rgba(255,248,245,.95)),
+url("background.png");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:#7a4735;
+
+overflow-x:hidden;
+
+}
+
+/* Grain */
 
 body::before{
 
@@ -51,11 +59,315 @@ pointer-events:none;
 opacity:.08;
 
 background-image:
-radial-gradient(#9d543d 0.6px, transparent 0.6px);
+radial-gradient(#8b4d37 .7px,transparent .7px);
 
-background-size:10px 10px;
+background-size:12px 12px;
 
-mix-blend-mode:multiply;
+}
+
+/* Navbar */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:25px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:999;
+
+backdrop-filter:blur(8px);
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo img{
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+}
+
+.logo h3{
+
+font-size:28px;
+
+font-weight:600;
+
+}
+
+nav{
+
+display:flex;
+
+gap:45px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#7a4735;
+
+font-weight:500;
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:#bb6a4c;
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:0 20px;
+
+}
+
+.hero h1{
+
+font-family:'League Spartan',sans-serif;
+
+font-size:240px;
+
+line-height:.82;
+
+letter-spacing:-10px;
+
+color:#9b523d;
+
+}
+
+.hero h2{
+
+font-family:Caveat,cursive;
+
+font-size:70px;
+
+margin-top:-12px;
+
+}
+
+.hero p{
+
+margin-top:25px;
+
+font-size:20px;
+
+letter-spacing:1px;
+
+max-width:700px;
+
+line-height:1.8;
+
+}
+
+.hero img{
+
+margin-top:40px;
+
+width:170px;
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+.button{
+
+margin-top:45px;
+
+display:inline-block;
+
+padding:18px 42px;
+
+background:#9b523d;
+
+color:white;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.button:hover{
+
+transform:translateY(-6px);
+
+background:#7d412f;
+
+}
+
+.scroll{
+
+position:absolute;
+
+bottom:30px;
+
+font-size:13px;
+
+letter-spacing:5px;
+
+animation:bounce 2s infinite;
+
+}
+
+/* About */
+
+section{
+
+padding:120px 10%;
+
+}
+
+.title{
+
+font-size:52px;
+
+text-align:center;
+
+margin-bottom:70px;
+
+font-family:'League Spartan',sans-serif;
+
+color:#8d4f3a;
+
+}
+
+.about{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.about-box{
+
+background:rgba(255,255,255,.45);
+
+backdrop-filter:blur(12px);
+
+padding:45px;
+
+border-radius:25px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.06);
+
+}
+
+.about-box h3{
+
+font-size:32px;
+
+margin-bottom:20px;
+
+}
+
+.about-box p{
+
+line-height:2;
+
+}
+
+/* Animation */
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-18px);}
+
+100%{transform:translateY(0);}
+
+}
+
+@keyframes bounce{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-10px);}
+
+100%{transform:translateY(0);}
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:120px;
+
+letter-spacing:-4px;
+
+}
+
+.hero h2{
+
+font-size:50px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.about{
+
+grid-template-columns:1fr;
+
+}
 
 }
 
@@ -65,8 +377,92 @@ mix-blend-mode:multiply;
 
 <body>
 
-<h1>Hello Kiki</h1>
+<header>
 
-</body>
+<div class="logo">
 
-</html>
+<img src="logo.png">
+
+<h3>Kiki</h3>
+
+</div>
+
+<nav>
+
+<a href="#about">About</a>
+
+<a href="#portfolio">Portfolio</a>
+
+<a href="#services">Services</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>KIKI</h1>
+
+<h2>the designer</h2>
+
+<p>
+
+Graphic Designer • Brand Identity • Packaging Design • Print Media • Social Media Creative
+
+</p>
+
+<img src="logo.png">
+
+<a href="#about" class="button">
+
+Explore Portfolio
+
+</a>
+
+<div class="scroll">
+
+SCROLL DOWN
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">
+
+About Me
+
+</h2>
+
+<div class="about">
+
+<div class="about-box">
+
+<h3>Creative Thinking</h3>
+
+<p>
+
+I create thoughtful visual identities, elegant branding systems, packaging, print media, and social media graphics that help businesses communicate with confidence and style.
+
+</p>
+
+</div>
+
+<div class="about-box">
+
+<h3>Design Philosophy</h3>
+
+<p>
+
+Every design should tell a story. My work combines creativity, simplicity, and attention to detail to create memorable experiences for brands and their audiences.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
