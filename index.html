@@ -6,12 +6,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kiki The Designer</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Kiki | Creative Graphic Designer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@700&family=League+Spartan:wght@700;800&display=swap" rel="stylesheet">
+
 
 <style>
 
@@ -22,25 +20,28 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 }
 
+
 body{
 
 font-family:Poppins,sans-serif;
 
 background:
-linear-gradient(rgba(255,248,245,.95),rgba(255,248,245,.95)),
+linear-gradient(
+rgba(255,248,245,.94),
+rgba(255,248,245,.94)
+),
 url("background.png");
 
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
 
-color:#7a4735;
+color:#704333;
 
 overflow-x:hidden;
 
 }
 
-/* Grain */
 
 body::before{
 
@@ -48,92 +49,57 @@ content:"";
 
 position:fixed;
 
-left:0;
-top:0;
-
-width:100%;
-height:100%;
+inset:0;
 
 pointer-events:none;
 
 opacity:.08;
 
 background-image:
-radial-gradient(#8b4d37 .7px,transparent .7px);
+radial-gradient(#8b4d37 .8px,transparent .8px);
 
 background-size:12px 12px;
 
 }
 
+
+/* NAVBAR */
+
+
 header{
-    position:fixed;
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-    width:90%;
-    max-width:1200px;
-    padding:16px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(255,255,255,.55);
-    backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,.3);
-    border-radius:60px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    z-index:999;
+
+position:fixed;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:90%;
+
+max-width:1200px;
+
+padding:15px 35px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(20px);
+
+border-radius:60px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+z-index:1000;
+
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo img{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    object-fit:cover;
-}
-
-.logo h3{
-    font-size:26px;
-    font-weight:700;
-    color:#8a4b38;
-}
-
-nav{
-    display:flex;
-    gap:35px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#7a4735;
-    font-weight:600;
-    position:relative;
-    transition:.3s;
-}
-
-nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:0;
-    height:2px;
-    background:#9b523d;
-    transition:.3s;
-}
-
-nav a:hover::after{
-    width:100%;
-}
-
-nav a:hover{
-    color:#9b523d;
-}
 
 .logo{
 
@@ -145,294 +111,326 @@ gap:15px;
 
 }
 
+
 .logo img{
 
-width:65px;
+width:55px;
 
-height:65px;
+height:55px;
 
 border-radius:50%;
 
+object-fit:cover;
+
 }
+
 
 .logo h3{
 
-font-size:28px;
+font-size:26px;
 
-font-weight:600;
+color:#8d4f3a;
 
 }
+
 
 nav{
 
 display:flex;
 
-gap:45px;
+gap:35px;
 
 }
+
 
 nav a{
 
 text-decoration:none;
 
-color:#7a4735;
+color:#704333;
 
-font-weight:500;
+font-weight:600;
 
-transition:.35s;
+position:relative;
+
+}
+
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-7px;
+
+left:0;
+
+height:2px;
+
+width:0;
+
+background:#9b523d;
+
+transition:.3s;
 
 }
 
-nav a:hover{
 
-color:#bb6a4c;
+nav a:hover::after{
+
+width:100%;
 
 }
+
+
+
+/* HERO */
+
 
 .hero{
 
-    min-height:100vh;
-    padding:150px 10% 80px;
+min-height:100vh;
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:60px;
+padding:150px 10% 80px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+gap:60px;
 
 }
+
 
 .hero-text h4{
 
-    color:#9b523d;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:20px;
+color:#9b523d;
+
+letter-spacing:4px;
+
+font-size:15px;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
 
 }
+
 
 .hero-text h1{
 
-    font-family:'League Spartan',sans-serif;
-    font-size:90px;
-    line-height:.95;
-    color:#7f4534;
+font-family:'League Spartan',sans-serif;
+
+font-size:110px;
+
+line-height:.9;
+
+color:#814735;
 
 }
+
 
 .hero-text h2{
 
-    font-family:Caveat,cursive;
-    font-size:58px;
-    margin:15px 0;
+font-family:Caveat,cursive;
+
+font-size:65px;
+
+margin:15px 0;
+
+color:#9b523d;
 
 }
+
 
 .hero-text p{
 
-    font-size:18px;
-    line-height:1.9;
-    max-width:550px;
-    margin:30px 0;
+font-size:18px;
+
+line-height:1.9;
+
+max-width:550px;
+
+margin:25px 0 35px;
 
 }
+
+
 
 .hero-buttons{
 
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
 
 }
+
+
 
 .button{
 
-    display:inline-block;
-    padding:16px 36px;
-    background:#9b523d;
-    color:#fff;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:600;
-    transition:.35s;
-
-}
-
-.button:hover{
-
-    transform:translateY(-5px);
-    box-shadow:0 20px 35px rgba(155,82,61,.3);
-
-}
-
-.secondary{
-
-    background:white;
-    color:#9b523d;
-    border:2px solid #9b523d;
-
-}
-
-.secondary:hover{
-
-    background:#9b523d;
-    color:white;
-
-}
-
-.hero-image{
-
-    display:flex;
-    justify-content:center;
-
-}
-
-.hero-image img{
-
-    width:420px;
-    max-width:100%;
-    border-radius:30px;
-    box-shadow:0 30px 60px rgba(0,0,0,.12);
-    animation:float 5s ease-in-out infinite;
-
-}
-<section class="hero">
-
-<div class="hero-text">
-
-<h4>Creative Graphic Designer</h4>
-
-<h1>KIKI</h1>
-
-<h2>the designer</h2>
-
-<p>
-
-I create memorable visual identities, branding systems, packaging, print materials, and social media designs that help businesses stand out and connect with their audience.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#portfolio" class="button">
-View Portfolio
-</a>
-
-<a href="#contact" class="button secondary">
-Hire Me
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<img src="logo.png" alt="Kiki">
-
-</div>
-
-</section>
-<section class="stats">
-
-<div class="stat">
-
-<h2>50+</h2>
-
-<p>Projects</p>
-
-</div>
-
-<div class="stat">
-
-<h2>20+</h2>
-
-<p>Happy Clients</p>
-
-</div>
-
-<div class="stat">
-
-<h2>3+</h2>
-
-<p>Years Experience</p>
-
-</div>
-
-<div class="stat">
-
-<h2>100%</h2>
-
-<p>Creative Passion</p>
-
-</div>
-
-</section>
-  
-.button{
-
-margin-top:45px;
-
-display:inline-block;
-
-padding:18px 42px;
+padding:16px 38px;
 
 background:#9b523d;
 
 color:white;
 
-border-radius:50px;
-
 text-decoration:none;
+
+border-radius:50px;
 
 font-weight:600;
 
-transition:.35s;
+transition:.3s;
 
 }
+
 
 .button:hover{
 
-transform:translateY(-6px);
+transform:translateY(-5px);
 
-background:#7d412f;
-
-}
-
-.scroll{
-
-position:absolute;
-
-bottom:30px;
-
-font-size:13px;
-
-letter-spacing:5px;
-
-animation:bounce 2s infinite;
+box-shadow:0 20px 35px rgba(155,82,61,.3);
 
 }
 
-/* About */
 
-section{
+.secondary{
 
-padding:120px 10%;
+background:white;
+
+color:#9b523d;
+
+border:2px solid #9b523d;
 
 }
 
-.title{
 
-font-size:52px;
+.secondary:hover{
+
+background:#9b523d;
+
+color:white;
+
+}
+
+
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+
+.hero-image img{
+
+width:420px;
+
+max-width:100%;
+
+border-radius:40px;
+
+box-shadow:0 30px 60px rgba(0,0,0,.15);
+
+animation:float 5s infinite ease-in-out;
+
+}
+
+
+
+/* STATS */
+
+
+.stats{
+
+padding:20px 10% 100px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+
+.stat{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
 
 text-align:center;
 
-margin-bottom:70px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+
+.stat:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+.stat h2{
+
+font-size:45px;
+
+color:#9b523d;
+
+}
+
+
+.stat p{
+
+font-weight:500;
+
+}
+
+
+
+/* GENERAL SECTION */
+
+
+section{
+
+padding:100px 10%;
+
+}
+
+
+.title{
 
 font-family:'League Spartan',sans-serif;
 
-color:#8d4f3a;
+font-size:55px;
+
+text-align:center;
+
+color:#814735;
+
+margin-bottom:60px;
 
 }
+
+
+
+/* ABOUT */
+
 
 .about{
 
@@ -440,33 +438,45 @@ display:grid;
 
 grid-template-columns:1fr 1fr;
 
-gap:60px;
-
-align-items:center;
+gap:40px;
 
 }
+
 
 .about-box{
 
-background:rgba(255,255,255,.45);
+background:rgba(255,255,255,.55);
 
-backdrop-filter:blur(12px);
+padding:40px;
 
-padding:45px;
+border-radius:30px;
 
-border-radius:25px;
+backdrop-filter:blur(15px);
 
-box-shadow:0 20px 45px rgba(0,0,0,.06);
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+transition:.3s;
 
 }
+
+
+.about-box:hover{
+
+transform:translateY(-8px);
+
+}
+
 
 .about-box h3{
 
-font-size:32px;
+font-size:30px;
 
 margin-bottom:20px;
 
+color:#8d4f3a;
+
 }
+
 
 .about-box p{
 
@@ -474,43 +484,46 @@ line-height:2;
 
 }
 
-/* Animation */
+
+/* ANIMATION */
+
 
 @keyframes float{
 
-0%{transform:translateY(0);}
+0%{
 
-50%{transform:translateY(-18px);}
-
-100%{transform:translateY(0);}
+transform:translateY(0);
 
 }
 
-@keyframes bounce{
+50%{
 
-0%{transform:translateY(0);}
-
-50%{transform:translateY(-10px);}
-
-100%{transform:translateY(0);}
+transform:translateY(-20px);
 
 }
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* MOBILE */
+
 
 @media(max-width:900px){
 
-.hero h1{
 
-font-size:120px;
+header{
 
-letter-spacing:-4px;
-
-}
-
-.hero h2{
-
-font-size:50px;
+padding:12px 20px;
 
 }
+
 
 nav{
 
@@ -518,21 +531,77 @@ display:none;
 
 }
 
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+
+.hero-text h1{
+
+font-size:75px;
+
+}
+
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+
 .about{
 
 grid-template-columns:1fr;
 
 }
 
+
+.stats{
+
+grid-template-columns:1fr 1fr;
+
 }
+
+
+}
+
+
+@media(max-width:500px){
+
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero-text h1{
+
+font-size:60px;
+
+}
+
+
+}
+
 
 </style>
 
 </head>
 
+
 <body>
 
+
 <header>
+
 
 <div class="logo">
 
@@ -541,6 +610,7 @@ grid-template-columns:1fr;
 <h3>Kiki</h3>
 
 </div>
+
 
 <nav>
 
@@ -554,70 +624,99 @@ grid-template-columns:1fr;
 
 </nav>
 
+
 </header>
+
 
 <section class="hero">
 
+
+<div class="hero-text">
+
+
+<h4>Creative Graphic Designer</h4>
+
+
 <h1>KIKI</h1>
 
-<h2>the designer</h2>
+
+<h2>The Designer</h2>
+
 
 <p>
 
-Graphic Designer • Brand Identity • Packaging Design • Print Media • Social Media Creative
+I create beautiful brand identities, packaging designs, print media and social media visuals that help businesses build a strong visual presence.
 
 </p>
 
-<img src="logo.png">
 
-<a href="#about" class="button">
+<div class="hero-buttons">
 
-Explore Portfolio
 
+<a href="#portfolio" class="button">
+View Portfolio
 </a>
 
-<div class="scroll">
 
-SCROLL DOWN
+<a href="#contact" class="button secondary">
+Hire Me
+</a>
+
 
 </div>
+
+
+</div>
+
+
+
+<div class="hero-image">
+
+<img src="logo.png" alt="Kiki Designer">
+
+</div>
+
 
 </section>
 
-<section id="about">
 
-<h2 class="title">
+<section class="stats">
 
-About Me
 
-</h2>
+<div class="stat">
 
-<div class="about">
+<h2>50+</h2>
 
-<div class="about-box">
-
-<h3>Creative Thinking</h3>
-
-<p>
-
-I create thoughtful visual identities, elegant branding systems, packaging, print media, and social media graphics that help businesses communicate with confidence and style.
-
-</p>
+<p>Projects</p>
 
 </div>
 
-<div class="about-box">
 
-<h3>Design Philosophy</h3>
+<div class="stat">
 
-<p>
+<h2>20+</h2>
 
-Every design should tell a story. My work combines creativity, simplicity, and attention to detail to create memorable experiences for brands and their audiences.
-
-</p>
+<p>Clients</p>
 
 </div>
 
+
+<div class="stat">
+
+<h2>3+</h2>
+
+<p>Years Experience</p>
+
 </div>
+
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Creativity</p>
+
+</div>
+
 
 </section>
